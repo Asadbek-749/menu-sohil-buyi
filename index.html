@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#4A6741">
+<meta name="description" content="Sohil Boyi mehmonxonasi restorani menyusi">
+<title>Sohil Boyi Menyu</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234A6741'/%3E%3Ctext x='32' y='43' font-size='34' text-anchor='middle' fill='%23E8D6A0' font-family='Georgia,serif'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic,latin-ext" rel="stylesheet">
+<style>
+/* Figma maketi: Sohil Boyi Menyu (Mobile 390 / Tablet 834 / Laptop 1440). Yashil fon, oltin chiziqlar, lagan ustidagi taomlar chap-o'ng almashinadi. */
+:root{
+  --green:#4A6741;
+  --green-deep:#3A5233;
+  --cream:#F4EDDA;
+  --gold:#E8D6A0;
+  --mute:#C9D3B4;
+  --plate:#EFE6D0;
+  --ink:#2B3A27;
+  --display:"Lora",Georgia,"Times New Roman",serif;
+  --body:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --content:350px;
+  --pad:20px;
+  --plate-size:150px;
+  --gap:16px;
+  --row-gap:28px;
+  color-scheme:dark;
+}
+@media (min-width:768px){:root{--content:720px;--pad:48px;--plate-size:260px;--gap:40px;--row-gap:40px}}
+@media (min-width:1200px){:root{--content:1040px;--plate-size:360px;--gap:72px;--row-gap:48px}}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--green);color:var(--cream);font-family:var(--body);font-size:16px;line-height:1.5;overflow-x:hidden;min-height:100%}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:8px}
+
+.page{position:relative;max-width:1440px;margin:0 auto;overflow-x:clip}
+.sprig{position:absolute;pointer-events:none;width:96px;height:176px;opacity:.95;z-index:0}
+.sprig.tl{top:50px;left:-34px}
+.sprig.r{display:none}
+@media (min-width:768px){.sprig{width:120px;height:220px}.sprig.tl{top:40px;left:-6px}.sprig.r{display:block;right:-6px;top:760px}}
+@media (min-width:1200px){.sprig{width:150px;height:275px}.sprig.tl{top:20px;left:30px}.sprig.r{right:30px;top:820px}}
+
+header{position:relative;z-index:1;text-align:center;padding:28px var(--pad) 20px;overflow:hidden}
+@media (min-width:768px){header{padding:48px var(--pad) 32px}}
+.lang{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--gold);border-radius:999px;margin-bottom:12px}
+.lang button{font:600 12px/1 var(--body);letter-spacing:.06em;color:var(--mute);background:none;border:0;padding:9px 14px;border-radius:999px;cursor:pointer;min-height:34px}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--ink)}
+.brand{font-family:var(--display);font-weight:500;font-size:clamp(34px,9vw,64px);letter-spacing:.12em;text-transform:uppercase;line-height:1.15;margin-bottom:12px}
+.sub{display:flex;align-items:center;justify-content:center;gap:14px;font:500 10px/1.3 var(--body);letter-spacing:.24em;text-transform:uppercase}
+.sub::before,.sub::after{content:"";height:1px;width:34px;background:var(--gold);flex:none}
+.menu-title{font-family:var(--display);font-weight:500;font-size:20px;letter-spacing:.4em;text-transform:uppercase;margin-top:12px;padding-left:.4em}
+@media (min-width:768px){.sub{font-size:12px}.sub::before,.sub::after{width:60px}.menu-title{font-size:26px;margin-top:16px}}
+@media (min-width:1200px){.sub{font-size:13px}.sub::before,.sub::after{width:80px}.menu-title{font-size:30px}}
+
+nav{position:sticky;top:0;z-index:5;background:rgba(74,103,65,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(232,214,160,.25)}
+.rail{display:flex;gap:8px;overflow-x:auto;padding:8px var(--pad);scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+@media (min-width:900px){.rail{justify-content:center}}
+.rail a{flex:0 0 auto;text-decoration:none;font:600 12px/1 var(--body);color:var(--mute);padding:11px 16px;border:1px solid rgba(201,211,180,.6);border-radius:999px;white-space:nowrap}
+@media (min-width:768px){.rail a{font-size:13px}}
+@media (min-width:1200px){.rail a{font-size:14px}}
+.rail a.on{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+
+main{position:relative;z-index:1;width:100%;max-width:calc(var(--content) + 2 * var(--pad));margin:0 auto;padding:28px var(--pad) 8px}
+@media (min-width:768px){main{padding-top:48px}}
+section{scroll-margin-top:70px;margin-bottom:var(--row-gap)}
+h2{display:flex;align-items:center;gap:14px;font-family:var(--display);font-style:italic;font-weight:500;font-size:24px;color:var(--gold);text-wrap:balance}
+h2::after{content:"";flex:1;height:1px;background:var(--gold);opacity:.5}
+@media (min-width:768px){h2{font-size:30px}}
+@media (min-width:1200px){h2{font-size:34px}}
+
+/* tanlangan taom: lagan rasmi + matn, chap-o'ng almashinadi */
+.feature{display:flex;align-items:center;justify-content:space-between;gap:var(--gap);margin:var(--row-gap) 0 calc(var(--row-gap) * .6)}
+.feature.flip{flex-direction:row-reverse}
+.feature .txt{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px}
+.plate{position:relative;flex:none;width:var(--plate-size);height:var(--plate-size);border-radius:50%;background:var(--plate);box-shadow:0 12px 28px rgba(0,0,0,.28);overflow:hidden}
+.plate::before{content:"";position:absolute;inset:11%;border-radius:50%;border:1px solid rgba(74,103,65,.25)}
+.plate img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.plate img[hidden]{display:none}
+.name{font-family:var(--display);font-weight:500;font-size:15px;letter-spacing:.08em;text-transform:uppercase;line-height:1.3;text-wrap:balance}
+.feature .name::after{content:"";display:block;width:36px;height:1px;background:var(--gold);margin:8px auto 0}
+.desc{font-size:13px;line-height:1.45;color:var(--cream)}
+.price{font-family:var(--display);font-weight:600;font-size:16px;color:var(--gold);font-variant-numeric:tabular-nums;white-space:nowrap}
+.price small{font:500 .7em var(--body);color:var(--mute);margin-left:4px}
+@media (min-width:768px){.feature .txt{gap:12px}.name{font-size:20px}.feature .name::after{width:48px}.desc{font-size:15px}.price{font-size:20px}}
+@media (min-width:1200px){.name{font-size:24px}.desc{font-size:16px}.price{font-size:22px}}
+
+/* qolgan taomlar: ixcham ro'yxat */
+.list{list-style:none;margin:0 auto;max-width:720px}
+.item{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:14px 0;border-top:1px solid rgba(201,211,180,.25)}
+.item .name{font-size:14px;letter-spacing:.06em}
+.item .desc{grid-column:1;color:var(--mute);font-size:13px}
+.item .price{grid-row:1;grid-column:2;font-size:15px}
+@media (min-width:768px){.item .name{font-size:16px}.item .desc{font-size:14px}.item .price{font-size:17px}}
+.veg{display:inline-block;margin-left:8px;font:700 10px/1 var(--body);letter-spacing:.05em;color:var(--ink);background:#C9E0B5;padding:4px 6px;border-radius:5px;vertical-align:2px}
+
+footer{position:relative;z-index:1;max-width:calc(var(--content) + 2 * var(--pad));margin:0 auto;padding:28px var(--pad) 44px;text-align:center}
+footer .hr{height:1px;background:var(--gold);opacity:.4;margin-bottom:16px}
+footer p{color:var(--mute);font-size:13px}
+footer .sample{display:block;margin-top:8px;color:var(--gold);font-size:12px}
+@media (min-width:768px){footer{padding-top:56px}footer p{font-size:14px}footer .sample{font-size:13px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sprig" viewBox="0 0 120 220">
+    <path d="M20 210C40 150 55 90 95 10" fill="none" stroke="#C9D3A8" stroke-width="1.5" stroke-linecap="round"/>
+    <g fill="#8FA877" stroke="#C9D3A8" stroke-width="1">
+      <path d="M40 150C20 140 12 120 14 100C34 108 44 128 40 150Z"/>
+      <path d="M52 118C74 112 88 96 90 76C68 80 54 98 52 118Z"/>
+      <path d="M62 88C42 78 36 58 40 40C58 48 66 68 62 88Z"/>
+      <path d="M78 54C98 50 108 34 108 18C90 22 80 36 78 54Z"/>
+    </g>
+  </symbol>
+</svg>
+
+<div class="page">
+  <svg class="sprig r" aria-hidden="true"><use href="#sprig"/></svg>
+
+  <header>
+    <svg class="sprig tl" aria-hidden="true"><use href="#sprig"/></svg>
+    <div class="lang" role="group" aria-label="Til / Язык / Language">
+      <button type="button" id="b-uz" data-l="uz" aria-pressed="true">UZ</button>
+      <button type="button" id="b-ru" data-l="ru" aria-pressed="false">RU</button>
+      <button type="button" id="b-en" data-l="en" aria-pressed="false">EN</button>
+    </div>
+    <h1 class="brand">Sohil Boyi</h1>
+    <p class="sub" id="tag"></p>
+    <p class="menu-title" id="mt"></p>
+  </header>
+
+  <nav aria-label="Menyu bo'limlari"><div class="rail" id="rail"></div></nav>
+  <main id="menu"></main>
+
+  <footer>
+    <div class="hr"></div>
+    <p id="allergy"></p>
+    <p id="curr"></p>
+    <span class="sample" id="sample"></span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var T={
+    uz:{tag:"Mehmonxona restorani",mt:"Menyu",allergy:"Allergiyangiz bo'lsa, buyurtma berishdan oldin ofitsiantga ayting.",curr:"Narxlar so'mda ko'rsatilgan.",sample:"Namunaviy menyu: taomlar, rasmlar va narxlar keyin yangilanadi",vegt:"Vegetarian",som:"so'm"},
+    ru:{tag:"Ресторан отеля",mt:"Меню",allergy:"Если у вас аллергия, сообщите официанту перед заказом.",curr:"Цены указаны в сумах.",sample:"Примерное меню: блюда, фото и цены будут обновлены",vegt:"Вегетарианское",som:"сум"},
+    en:{tag:"Hotel restaurant",mt:"Menu",allergy:"If you have an allergy, tell your waiter before ordering.",curr:"Prices are in Uzbek so'm.",sample:"Sample menu: dishes, photos and prices will be updated",vegt:"Vegetarian",som:"UZS"}
+  };
+  /* [narx, vegetarian, nom, tavsif]; birinchi taom rasm bilan ko'rsatiladi */
+  var M=[
+    {id:"starters",img:"burrata",n:{uz:"Gazaklar",ru:"Закуски",en:"Starters"},i:[
+      [58000,1,{uz:"Burrata va pomidor",ru:"Буррата с томатами",en:"Burrata and tomato"},{uz:"Pesto, zaytun moyi, yangi rayhon",ru:"Песто, оливковое масло, свежий базилик",en:"Pesto, olive oil, fresh basil"}],
+      [65000,0,{uz:"Tunets tartari",ru:"Тартар из тунца",en:"Tuna tartare"},{uz:"Avokado, susam, sitrus sousi",ru:"Авокадо, кунжут, цитрусовый соус",en:"Avocado, sesame, citrus dressing"}],
+      [72000,0,{uz:"Mol go'shti karpachosi",ru:"Карпаччо из говядины",en:"Beef carpaccio"},{uz:"Rukkola, parmezan, limon",ru:"Руккола, пармезан, лимон",en:"Rocket, parmesan, lemon"}],
+      [48000,1,{uz:"Sharq mezze assortisi",ru:"Ассорти мезе",en:"Mezze platter"},{uz:"Xummus, baqlajon, zaytun, issiq non",ru:"Хумус, баклажан, оливки, тёплый хлеб",en:"Hummus, aubergine, olives, warm bread"}]
+    ]},
+    {id:"soups",img:"mastava",n:{uz:"Sho'rvalar",ru:"Супы",en:"Soups"},i:[
+      [42000,0,{uz:"Mastava",ru:"Мастава",en:"Mastava"},{uz:"Guruch, mol go'shti va sabzavotlar",ru:"Рис, говядина и овощи",en:"Rice, beef and vegetables"}],
+      [46000,0,{uz:"Sho'rva",ru:"Шурпа",en:"Shurpa"},{uz:"Qo'y go'shti, kartoshka, yangi ko'katlar",ru:"Баранина, картофель, свежая зелень",en:"Lamb, potato, fresh herbs"}],
+      [38000,1,{uz:"Pomidor krem-sho'rva",ru:"Крем-суп из томатов",en:"Cream of tomato soup"},{uz:"Rayhon va kruton bilan",ru:"С базиликом и гренками",en:"With basil and croutons"}],
+      [64000,0,{uz:"Dengiz mahsulotlari bisk",ru:"Биск из морепродуктов",en:"Seafood bisque"},{uz:"Krevetka, qaymoq, brendi",ru:"Креветки, сливки, бренди",en:"Prawns, cream, brandy"}]
+    ]},
+    {id:"mains",img:"sibas",n:{uz:"Asosiy taomlar",ru:"Основные блюда",en:"Main courses"},i:[
+      [185000,0,{uz:"Panjara baliq (sibas)",ru:"Сибас на гриле",en:"Grilled sea bass"},{uz:"Qaynatilgan sabzavotlar, limon-sariyog' sousi",ru:"Овощи, лимонно-сливочный соус",en:"Steamed vegetables, lemon butter sauce"}],
+      [390000,0,{uz:"Ribay stek",ru:"Стейк рибай",en:"Ribeye steak"},{uz:"Qovurilgan kartoshka, murch sousi",ru:"Картофель, перечный соус",en:"Roast potatoes, peppercorn sauce"}],
+      [128000,0,{uz:"Tovuq qo'ziqorin sousida",ru:"Курица в грибном соусе",en:"Chicken in mushroom sauce"},{uz:"Truffel kartoshka pyuresi bilan",ru:"С трюфельным картофельным пюре",en:"With truffle potato purée"}],
+      [96000,1,{uz:"Qo'ziqorinli rizotto",ru:"Ризотто с лесными грибами",en:"Wild mushroom risotto"},{uz:"Parmezan, tilla piyoz",ru:"Пармезан, золотистый лук",en:"Parmesan, golden onion"}]
+    ]},
+    {id:"uzbek",img:"bayram-oshi",n:{uz:"Milliy taomlar",ru:"Узбекская кухня",en:"Uzbek classics"},i:[
+      [85000,0,{uz:"Bayram oshi",ru:"Праздничный плов",en:"Festive plov"},{uz:"Mol go'shti, no'xat, bedana tuxumi, achichuk",ru:"Говядина, нут, перепелиное яйцо, ачичук",en:"Beef, chickpeas, quail egg, achichuk salad"}],
+      [62000,0,{uz:"Lag'mon",ru:"Лагман",en:"Lagman"},{uz:"Qo'lda cho'zilgan lag'mon, mol go'shti, sabzavotlar",ru:"Лапша ручной вытяжки, говядина, овощи",en:"Hand-pulled noodles, beef, vegetables"}],
+      [98000,0,{uz:"Qo'y go'shti shashlik",ru:"Шашлык из баранины",en:"Lamb shashlik"},{uz:"Ko'mirda pishirilgan, piyoz, non",ru:"На углях, лук, лепёшка",en:"Charcoal grilled, onion, flatbread"}],
+      [54000,1,{uz:"Qovoqli manti",ru:"Манты с тыквой",en:"Pumpkin manti"},{uz:"Bug'da pishirilgan, qatiq bilan",ru:"На пару, с катыком",en:"Steamed, served with yoghurt"}]
+    ]},
+    {id:"desserts",img:"fondan",n:{uz:"Shirinliklar",ru:"Десерты",en:"Desserts"},i:[
+      [52000,1,{uz:"Shokoladli fondan",ru:"Шоколадный фондан",en:"Chocolate fondant"},{uz:"Malina sousi, vanil muzqaymoq",ru:"Малиновый соус, ванильное мороженое",en:"Raspberry sauce, vanilla ice cream"}],
+      [48000,1,{uz:"Pistali tiramisu",ru:"Тирамису с фисташкой",en:"Pistachio tiramisu"},{uz:"Mascarpone, pista kremi",ru:"Маскарпоне, фисташковый крем",en:"Mascarpone, pistachio cream"}],
+      [46000,1,{uz:"Pavlova",ru:"Павлова",en:"Pavlova"},{uz:"Malina, mango, qaymoq",ru:"Малина, манго, сливки",en:"Raspberry, mango, cream"}],
+      [60000,1,{uz:"Mevalar assortisi",ru:"Фруктовая тарелка",en:"Fruit platter"},{uz:"Mavsumiy mevalar",ru:"Сезонные фрукты",en:"Seasonal fruit"}]
+    ]},
+    {id:"drinks",img:"limonad",n:{uz:"Ichimliklar",ru:"Напитки",en:"Drinks"},i:[
+      [38000,1,{uz:"Uy limonadi",ru:"Домашний лимонад",en:"House lemonade"},{uz:"Limon, yalpiz, siropsiz variant ham bor",ru:"Лимон, мята, есть вариант без сиропа",en:"Lemon, mint, sugar-free option available"}],
+      [35000,1,{uz:"Yangi siqilgan sharbat",ru:"Свежевыжатый сок",en:"Fresh juice"},{uz:"Apelsin, anor yoki olma",ru:"Апельсин, гранат или яблоко",en:"Orange, pomegranate or apple"}],
+      [28000,1,{uz:"Choy tanlovi",ru:"Выбор чая",en:"Tea selection"},{uz:"Qora, ko'k, gulli, yalpizli",ru:"Чёрный, зелёный, цветочный, мятный",en:"Black, green, floral, mint"}],
+      [32000,1,{uz:"Qahva",ru:"Кофе",en:"Coffee"},{uz:"Espresso, amerikano, kapuchino, latte",ru:"Эспрессо, американо, капучино, латте",en:"Espresso, americano, cappuccino, latte"}]
+    ]}
+  ];
+  var lang="uz";
+  try{var s=localStorage.getItem("sb-lang");if(s&&T[s])lang=s;}catch(e){}
+
+  function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g," ");}
+  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e;}
+  function price(v,t){var p=el("div","price",fmt(v));p.appendChild(el("small","",t.som));return p;}
+  function veg(nm,t){var v=el("span","veg","V");v.title=t.vegt;v.setAttribute("aria-label",t.vegt);nm.appendChild(v);}
+
+  function render(){
+    var t=T[lang];
+    document.documentElement.lang=lang;
+    document.getElementById("tag").textContent=t.tag;
+    document.getElementById("mt").textContent=t.mt;
+    document.getElementById("allergy").textContent=t.allergy;
+    document.getElementById("curr").textContent=t.curr;
+    document.getElementById("sample").textContent=t.sample;
+    ["uz","ru","en"].forEach(function(l){document.getElementById("b-"+l).setAttribute("aria-pressed",String(l===lang));});
+
+    var rail=document.getElementById("rail");rail.textContent="";
+    var main=document.getElementById("menu");main.textContent="";
+    M.forEach(function(c,idx){
+      var a=el("a",idx===0?"on":"",c.n[lang]);a.href="#"+c.id;a.dataset.t=c.id;rail.appendChild(a);
+
+      var sec=el("section");sec.id=c.id;
+      sec.appendChild(el("h2","",c.n[lang]));
+
+      var f=c.i[0];
+      var row=el("div","feature"+(idx%2===1?" flip":""));
+      var txt=el("div","txt");
+      var nm=el("div","name",f[2][lang]);if(f[1])veg(nm,t);
+      txt.appendChild(nm);txt.appendChild(el("div","desc",f[3][lang]));txt.appendChild(price(f[0],t));
+      var plate=el("div","plate");
+      var img=document.createElement("img");img.src="img/"+c.img+".jpg";img.alt=f[2][lang];img.loading="lazy";img.decoding="async";
+      img.onerror=function(){img.hidden=true;};
+      plate.appendChild(img);
+      row.appendChild(txt);row.appendChild(plate);
+      sec.appendChild(row);
+
+      var ul=el("ul","list");
+      c.i.slice(1).forEach(function(d){
+        var li=el("li","item");
+        var n2=el("div","name",d[2][lang]);if(d[1])veg(n2,t);
+        li.appendChild(n2);li.appendChild(price(d[0],t));li.appendChild(el("div","desc",d[3][lang]));
+        ul.appendChild(li);
+      });
+      sec.appendChild(ul);
+      main.appendChild(sec);
+    });
+    spy();
+  }
+
+  function spy(){
+    var links=document.querySelectorAll("#rail a"),secs=document.querySelectorAll("section");
+    if(!secs.length)return;
+    var cur=secs[0].id;
+    secs.forEach(function(s){if(s.getBoundingClientRect().top<=110)cur=s.id;});
+    var r=document.getElementById("rail");
+    links.forEach(function(a){
+      var on=a.dataset.t===cur;a.classList.toggle("on",on);
+      if(on&&r.scrollWidth>r.clientWidth){r.scrollTo({left:a.offsetLeft-r.clientWidth/2+a.clientWidth/2,behavior:"auto"});}
+    });
+  }
+
+  document.querySelectorAll(".lang button").forEach(function(b){
+    b.addEventListener("click",function(){lang=b.dataset.l;try{localStorage.setItem("sb-lang",lang);}catch(e){}render();});
+  });
+  var tick=false;
+  window.addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(function(){spy();tick=false;});}},{passive:true});
+  render();
+})();
+</script>
+</body>
+</html>
